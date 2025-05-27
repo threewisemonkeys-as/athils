@@ -17,6 +17,8 @@ class JsonLinesFile:
 
     @staticmethod
     def add_to(file: Path | str, datapoint):
+        if not Path(file).exists():
+            Path(file).touch()
         ends_with_nl =  file_ends_with_newline(file)
         empty = Path(file).read_text().strip() == ''
         with open(file, 'a') as f:
