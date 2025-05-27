@@ -1,2 +1,3 @@
 # athils
-Portable utilities
+
+A portable package of miscellaneous utilities
